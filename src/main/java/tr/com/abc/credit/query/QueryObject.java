@@ -1,15 +1,15 @@
 package tr.com.abc.credit.query;
 
 public class QueryObject {
-    int tckn;
-    int krediNumarasi;
+    Integer tckn;
+    Integer krediNumarasi;
     String bankaAdi;
     String krediTuru;
     String dosyaTarihi;
 
     public QueryObject() { }
 
-    public QueryObject(int tckn, int krediNumarasi, String bankaAdi, String krediTuru, String dosyaTarihi) {
+    public QueryObject(Integer tckn, Integer krediNumarasi, String bankaAdi, String krediTuru, String dosyaTarihi) {
         this.tckn = tckn;
         this.krediNumarasi = krediNumarasi;
         this.bankaAdi = bankaAdi;
@@ -17,19 +17,30 @@ public class QueryObject {
         this.dosyaTarihi = dosyaTarihi;
     }
 
-    public int getTckn() {
+    @Override
+    public String toString() {
+        return "QueryObject{" +
+                "tckn=" + tckn +
+                ", krediNumarasi=" + krediNumarasi +
+                ", bankaAdi='" + bankaAdi + '\'' +
+                ", krediTuru='" + krediTuru + '\'' +
+                ", dosyaTarihi='" + dosyaTarihi + '\'' +
+                '}';
+    }
+
+    public Integer getTckn() {
         return tckn;
     }
 
-    public void setTckn(int tckn) {
+    public void setTckn(Integer tckn) {
         this.tckn = tckn;
     }
 
-    public int getKrediNumarasi() {
+    public Integer getKrediNumarasi() {
         return krediNumarasi;
     }
 
-    public void setKrediNumarasi(int krediNumarasi) {
+    public void setKrediNumarasi(Integer krediNumarasi) {
         this.krediNumarasi = krediNumarasi;
     }
 
@@ -55,16 +66,5 @@ public class QueryObject {
 
     public void setDosyaTarihi(String dosyaTarihi) {
         this.dosyaTarihi = dosyaTarihi;
-    }
-
-    @Override
-    public String toString() {
-        return "QueryObject{" +
-                "tckn=" + tckn +
-                ", krediNumarasi=" + krediNumarasi +
-                ", bankaAdi='" + bankaAdi + '\'' +
-                ", krediTuru='" + krediTuru + '\'' +
-                ", dosyaTarihi='" + dosyaTarihi + '\'' +
-                '}';
     }
 }
