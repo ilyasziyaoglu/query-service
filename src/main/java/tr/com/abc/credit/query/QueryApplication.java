@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.File;
 import java.io.FileReader;
+import java.util.List;
 
 @SpringBootApplication
 public class QueryApplication {
@@ -13,8 +14,10 @@ public class QueryApplication {
 		SpringApplication.run(QueryApplication.class, args);
 
 		QueryService qs = new QueryService();
-		QueryObject queryObject = new QueryObject(123, 123, "Isbank", "", "");
-		qs.doQuery(queryObject);
+		QueryObject queryObject = new QueryObject(null, null, "Isbank", null, null);
+
+		ResponseObject results =  qs.doQuery(queryObject);
+		System.out.println(results.toString());
 	}
 
 }

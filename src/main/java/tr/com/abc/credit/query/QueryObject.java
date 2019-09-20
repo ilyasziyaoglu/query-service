@@ -1,11 +1,11 @@
 package tr.com.abc.credit.query;
 
 public class QueryObject {
-    Integer tckn;
-    Integer krediNumarasi;
-    String bankaAdi;
-    String krediTuru;
-    String dosyaTarihi;
+    private Integer tckn;
+    private Integer krediNumarasi;
+    private String bankaAdi;
+    private String krediTuru;
+    private String dosyaTarihi;
 
     public QueryObject() { }
 
